@@ -31,6 +31,14 @@ func process(w http.ResponseWriter, r *http.Request) {
 
 	t := poker.Title
 
+	y := testPass(t)
+
+	json.NewEncoder(w).Encode(y)
+}
+
+// テストのため関数を切り出した。
+func testPass(t string) string {
+
 	var err string
 
 	p, err := exDuplicatedCards(t, err)
@@ -57,7 +65,8 @@ func process(w http.ResponseWriter, r *http.Request) {
 		x = err
 	}
 
-	json.NewEncoder(w).Encode(x)
+	return x
+
 }
 
 func main() {
