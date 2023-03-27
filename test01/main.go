@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
-
-	"test01/hello"
+	"test01/calc"
 )
 
 func main() {
-	a := hello.GetHello("World!")
-	fmt.Println(a)
+	c := calc.Calc(2, 4)
+	fmt.Println(c)
 }
