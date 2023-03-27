@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"reflect"
@@ -93,8 +92,6 @@ func exDuplicatedCards(cards string, err string) (string, string) {
 	} else {
 		// 正常系
 	}
-
-	fmt.Printf("%d\n", err)
 
 	return cards, err
 }
